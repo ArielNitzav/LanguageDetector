@@ -11,12 +11,12 @@ import pickle
 from matplotlib import pyplot as plt
 from sklearn.decomposition import PCA
 
+# list of available languages
 lang_list = ['Bulgarian', 'Czech', 'Danish', 'Estonian', 'Finnish', 'French', 'German', 'Greek', 'Hungarian', 'Italian',
              'Spanish', 'Swedish', 'English', 'Latvian', 'Lithuanian', 'Polish', 'Portuguese', 'Romanian', 'Slovene', 'Dutch']
 
 char_set = []
 data_df = pd.DataFrame(columns=["Sentence", "Language"])
-
 
 for language in lang_list:
     sentence_list, char_set = Preprocess.sent_preprocess("Data/{}.txt".format(language), 200, 10000, language, char_set)
@@ -44,7 +44,6 @@ test = pd.concat([test, pd.DataFrame(predictions, columns=["Predictions"])])
 accuracy = neigh.score(x_test, y_test)
 print(accuracy)
 
-'''
 pkl_filename = "neigh.pkl"
 with open(pkl_filename, 'wb') as file:
     pickle.dump(neigh, file)
@@ -52,7 +51,6 @@ with open(pkl_filename, 'wb') as file:
 pkl_filename = "char_set.pkl"
 with open(pkl_filename, 'wb') as file:
     pickle.dump(char_set, file)
-'''
 
 kmeans = KMeans(n_clusters=len(lang_list))
 kmeans.fit(x_train)
