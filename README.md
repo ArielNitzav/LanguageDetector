@@ -1,2 +1,4 @@
-# LanguageDetector
-An ML language detector based on character frequencies within a sentence.
+# CF Language Detector
+The following project demonstrates how an unexcepted approach to a project can achieve outstandingly accurate results. 
+Many NLP projects that deal with text often tend to use bag-of-words models (TF-IDF, etc.), but for the mission of detecting a language based on textual input, a different, more abstract approach can be taken,  99% (!).
+The idea is to look at character (or letter) frequencies within a sentence, instead of looking at the words within the text. This works because each language has its own set of used letters, and moreover – has a unique frequency pattern for each character within a sentence. For example, a sentence written in French has a considerable amount of "e", will probably include the characters "ç" or maybe "â", while a sentence written in English or Dutch will most likely not have them. This is, of course, a trivial example, but it gets trickier when trying to tell apart languages such as Danish from Swedish or Estonian from Finnish, that look very similar in their written form. The frequency of each character within a sentence is the key for overcoming this challenge.
