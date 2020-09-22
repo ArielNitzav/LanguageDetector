@@ -10,7 +10,6 @@ I chose K=10 as it delivered a ~99% accuracy rate on the test set – it may see
 
 Bonus for the end: a plot that represents languages in space (using PCA to reduce the dimension from 204 to 2):
 
-<div style="text-align:center"><img src="pca.png" /></div>
 ![The Data](pca.png "The Data")
 >Each sentence is a point in space and each color represent a different language. On the left: languages that use the Latin alphabet. The blue blob at the upper right: Greek, and Below lies Bulgarian, in green. The last two use a non-Latin alphabet (Greek and Cyrillic, respectively).
 
