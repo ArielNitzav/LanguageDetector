@@ -2,7 +2,7 @@
 The following project demonstrates how an unexcepted approach to a project can achieve outstandingly accurate results. Many NLP projects that deal with text often tend to use bag-of-words models (TF-IDF, etc.), but for the mission of detecting a language based on textual input, a different, more abstract approach can be taken. The idea is to look at character (or letter) frequencies within a sentence, instead of looking at the words within the text. This works because each language has its own set of used letters, and moreover – has a unique frequency pattern for each character within a sentence. For example, a sentence written in French has a considerable amount of "e", and will probably include the characters "ç" or "â", while a sentence written in English or Dutch will most likely not have them. This is, of course, a trivial example, but it gets trickier when trying to tell apart languages like Danish from Swedish or Estonian from Finnish, that look very similar in their written form. The frequency of each character within a sentence is the key for overcoming this challenge.
 
 ##### The Data
-The European parliament's proceedings, which are available for free download in most of the union's official languages, here: http://www.statmt.org/europarl/
+The European parliament's proceedings, which are available for free download in most of the union's official languages, here: http://www.statmt.org/europarl/<br>
 Sadly the data was not uploaded due to its large size (~4.1 GB).
 
 ##### The Method
