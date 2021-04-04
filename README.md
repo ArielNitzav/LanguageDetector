@@ -3,7 +3,6 @@ The following project demonstrates how an unexcepted approach to a project can a
 
 ##### The Data
 The European parliament's proceedings, which are available for free download in most of the union's official languages, here: http://www.statmt.org/europarl/<br>
-Sadly the data was not uploaded due to its large size (~4.1 GB).
 
 ##### The Method
 We parse each text file (proceeding in a specific language) into sentences and take a sample of 10,000 sentences that are at least 200 characters long (in order to decrease the variance of the frequency vectors, more on that later). We then create a corpus of all the letter characters that appear in the selected sentences, from all the languages in our data. Then, we once again go through the sentences' list and for each sentence create a frequency histogram (or frequency vector) that records the percentage of each character from the corpus in each sentence, thus representing each sentence as a 204 entries vector (204 for the 204 characters in the corpus) that together form a convex set. Now that each sentence is represented as a point in space, we can use a KNN model to classify new unlabeled sentences that we introduce to the classifier. 
